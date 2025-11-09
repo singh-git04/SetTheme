@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OS Theme Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Light Theme */
+    body.light {
+      background-color: #f7f7f7;
+      color: #222;
+    }
+  
+    /* Dark Theme */
+    body.dark {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #0078ff;
+      color: white;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>OS-Based Theme</h1>
+    <p>This page adapts to your OS theme and can be switched manually.</p>
+    <button id="toggleBtn">Toggle Theme</button>
+  </div>
+
+  <script src="style.js"></script>
+</body>
+</html>
