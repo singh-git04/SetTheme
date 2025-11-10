@@ -9,6 +9,11 @@ if(window.matchMedia("(prefers-color-scheme: dark)").matches){
 }
 }
 
+if(localStorage.getItem("theme")){
+  document.body.classList.add(localStorage.getItem("theme"));
+}else{
+  settheme();
+}
 // changes theme on click; 
 let btn = document.querySelector("button");
 btn.addEventListener("click", function(){
@@ -29,7 +34,10 @@ btn.addEventListener("click", function(){
 
 // add event according to os; 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){
-  settheme();
+  if(!localStorage.getItem("theme")){
+    settheme();
+  }
+  
 });
 // set theme on reload; 
-settheme();
+ 
